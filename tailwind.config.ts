@@ -8,12 +8,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0A0A0B",
-        surface: "#121214",
+        bg: "#050507",
+        surface: "#0A0A0B",
         accent: "#22D3EE",
+        violet: "#A78BFA",
       },
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "Inter", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "Inter", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Syne", "system-ui", "sans-serif"],
       },
     },
   },

@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -36,7 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-bg text-zinc-100`}>
+      <body
+        className={`${inter.variable} ${syne.variable} font-sans antialiased bg-[#050507] text-zinc-100`}
+      >
         {children}
       </body>
     </html>
