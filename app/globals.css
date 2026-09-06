@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0b;
+  --surface: #121214;
+  --accent: #22d3ee;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .glow-border {
+    box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.12),
+      0 0 24px rgba(34, 211, 238, 0.06);
+  }
+  .card-hover {
+    transition: border-color 0.2s ease, transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .card-hover:hover {
+    border-color: rgba(34, 211, 238, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.2),
+      0 12px 40px rgba(0, 0, 0, 0.45);
+  }
+}
